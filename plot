@@ -24,11 +24,7 @@ plot <- ggplot(stats, aes(i, mean)) +
     geom_point(size = 0.5) +
     geom_smooth(method = "lm") +
     scale_y_continuous(limits = c(0, NA)) +
-    labs(
-        x = "Number of Inserts",
-        y = "Mean Time [ms]",
-        title = "MinIO: GetObject performance under load"
-    )
+    labs(x = "Number of Inserts", y = "Mean Time [ms]")
 
 ggsave("get_object.pdf", plot = plot, width = 10)
 ggsave("get_object.svg", plot = plot, width = 10)
